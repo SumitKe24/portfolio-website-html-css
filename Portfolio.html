@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Navbar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      padding-top: 80px; /* Added to prevent content from hiding behind fixed navbar */
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: fixed; /* Made navbar fixed */
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000; /* Ensures navbar stays above other content */
+    }
+
+    /* Rest of your existing CSS remains exactly the same */
+    .logo {
+      font-weight: bold;
+      font-size: 24px;
+      margin-left: 250px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+      margin-right: 250px;
+    }
+
+    .nav-links li p {
+      color: #000;
+      font-weight: 500;
+      font-size: 18px;
+      margin: 0;
+      position: relative;
+    }
+
+    .nav-links li:first-child p::after {
+      content: "";
+      display: block;
+      height: 3px;
+      background-color: #ff7743;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      right: 0;
+    }
+    
+    .martin {
+      background-color: #ff7743;
+      height: 500px;
+      width: calc(100% - 500px);
+      margin-left: 250px;
+      margin-top: 100px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 119, 67, 0.5);
+      border-radius: 10px;
+    }
+
+    h2 {
+      font-size: 60px;  
+      text-align: center;
+      position: relative;
+    }
+    
+    /* Added underline for About heading */
+    h2::after {
+      content: "";
+      display: block;
+      height: 3px;
+      background-color: #ff7743;
+      width: 250px;
+      margin: 10px auto 0;
+    }
+
+    /* Flexbox Use */
+    .pricing-container {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+    .pricing-plan {
+        flex: 1;
+        max-width: 525px;
+        padding: 20px;
+        background-color: #105cee;
+        border-radius: 10px;
+        text-align: center;
+        margin: 20px;
+    }
+    .plan-title {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .plan-features {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .plan-features li {
+        font-size: 30px;
+        
+        margin-bottom: 20px;
+    }
+    /* Contact */
+    .lucky {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        text-align: center;
+        background-color: #105cee;
+        height: 250px;
+        width: 600px;
+        margin-left: 33%;
+        padding-top: 3px;
+        padding-bottom: 0px;
+        margin-bottom: 0;
+        border-radius: 10px;
+        margin-bottom: 50px;
+    }
+    /* Footer */
+    .chalo {
+        background-color: black;
+        color: white;
+        clear: both;
+        text-align: center;
+    }
+
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">👨🏻‍🎓Sumit</div>
+    <ul class="nav-links">
+      <li><p>Home</p></li>
+      <li><p>About</p></li>
+      <li><p>Contact</p></li>
+    </ul>
+  </div>
+  
+  <div class="martin">
+    <img src="./Images/Student.png" />
+  </div>
+  <br />
+  <br />
+  <br />
+  <br />
+  <h2>About</h2>
+  
+  <div class="pricing-container">
+    <div class="pricing-plan">
+      <div class="plan-title">EDUCATION</div>
+      <ul class="plan-features">
+        <li>🚀IIM BANGLORE BBA (2024-27)</li>
+        <li>✅CLASS 12TH SCIENCE (2022) - 73%</li>
+        <li>✅CLASS 10TH GENERAL (2020) - 80%</li>
+      </ul>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">AREAS OF INTEREST</div>
+      <ul class="plan-features">
+        <li>✅Social Work</li>
+        <li>✅Oration</li>
+        <li>✅Volunterring</li>
+      </ul>
+    </div>
+  </div>
+  <div class="pricing-container">
+    <div class="pricing-plan">
+      <div class="plan-title">CO-CURRICULAR AND OTHER ACHIEVEMENTS</div>
+      <ul class="plan-features">
+        <li>✅Won 3rd position in the inter-school quiz competition. (2019)</li>
+        <li>✅Won 1st position in tug of war event in the annual  sports competition. (2019)        </li>
+        <li>✅Second runner up in the inter school quiz competition.(2018)</li>
+      </ul>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">SKILLS</div>
+      <ul class="plan-features">
+        <li>✅Customer Service</li>
+        <li>✅Communication</li>
+        <li>✅Active Listening</li>
+        <li>✅Computer Literacy</li>
+      </ul>
+    </div>
+  </div>
+  <h2>Contact</h2>
+  <div class="lucky">
+    <p>NAME: SUMIT KERKETTA</p>
+    <p>University: Indian Institute of Management BANGLORE</p>
+    <p>Email: sumitkerketta905@gmail.com</p>
+    <p>Phone: +918102116616</p>
+  </div>
+  <div class="bhalai">
+    <footer class="chalo">
+        <p>©SUMIT KERKETTA. ALL RIGHTS RESERVED 2025</p>
+    </footer>
+  </div>
+  
+</body>
+</html>
